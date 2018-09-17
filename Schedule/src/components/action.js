@@ -1,13 +1,16 @@
+
 import React, { Component } from 'react';
 import Icon from './icon';
- class Action extends Component {
+
+class Action extends Component {
     render() {
         return (
-            <div className={`${this.props.className} action`}>
-                { Icon("fas fa-plus-circle") }
-                {/* <i class="fas fa-times-circle"></i> */}
-             </div>
+            <button onClick={() => this.props.onClick()} className={`${this.props.className} action`}>
+                { Icon('fas fa-plus-circle') }
+                {/* fas fa-times-circle */}
+            </button>
         )
     }
 }
- export default Action; 
+
+export default Action;
